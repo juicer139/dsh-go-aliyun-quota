@@ -1,6 +1,6 @@
 {
   "name": "dsh-go-aliyun-quota",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "阿里云额度与花费的 dsh-go 原生面板：可用余额、代金券（含大学生优惠券）、到期提醒、账单趋势、按模型的 token 用量。Aliyun quota and spending panels for dsh-go.",
   "type": "module",
   "main": "lib/index.js",
@@ -86,8 +86,7 @@
           "icon": "wallet",
           "placement": [
             "session.tab",
-            "features",
-            "plugin"
+            "features"
           ]
         },
         {
@@ -99,8 +98,7 @@
           "icon": "chart",
           "placement": [
             "session.tab",
-            "features",
-            "plugin"
+            "features"
           ]
         },
         {
@@ -111,8 +109,7 @@
           },
           "icon": "settings",
           "placement": [
-            "features",
-            "plugin"
+            "features"
           ]
         }
       ]
