@@ -28,16 +28,16 @@
     "coupon",
     "token-usage"
   ],
-  "author": "20132556",
+  "author": "juicer139",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/20132556/dsh-go-aliyun-quota.git"
+    "url": "git+https://github.com/juicer139/dsh-go-aliyun-quota.git"
   },
   "bugs": {
-    "url": "https://github.com/20132556/dsh-go-aliyun-quota/issues"
+    "url": "https://github.com/juicer139/dsh-go-aliyun-quota/issues"
   },
-  "homepage": "https://github.com/20132556/dsh-go-aliyun-quota#readme",
+  "homepage": "https://github.com/juicer139/dsh-go-aliyun-quota#readme",
   "engines": {
     "node": ">=20",
     "dsh": ">=0.2.1-rc.2 <0.3.0-0"
