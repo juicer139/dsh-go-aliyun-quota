@@ -1,0 +1,7 @@
+# dsh-go-aliyun-quota — bundle patch
+# 把插件行插进 web profile 的配置树（dsh.bundle.patch 声明的层）。
+# id 任意唯一；name 必须与 package.json 的 name 一致。
+
+- insert:
+    - id: dsh-go-aliyun-quota
+      name: dsh-go-aliyun-quota

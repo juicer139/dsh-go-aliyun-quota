@@ -1,0 +1,121 @@
+{
+  "name": "dsh-go-aliyun-quota",
+  "version": "0.1.0",
+  "description": "阿里云额度与花费的 dsh-go 原生面板：可用余额、代金券（含大学生优惠券）、到期提醒、账单趋势、按模型的 token 用量。Aliyun quota and spending panels for dsh-go.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/**/*.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-go",
+    "dshGo",
+    "dsh-go-plugin",
+    "aliyun",
+    "aliyun-quota",
+    "aliyun-billing",
+    "bss-openapi",
+    "coupon",
+    "token-usage"
+  ],
+  "author": "20132556",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/20132556/dsh-go-aliyun-quota.git"
+  },
+  "bugs": {
+    "url": "https://github.com/20132556/dsh-go-aliyun-quota/issues"
+  },
+  "homepage": "https://github.com/20132556/dsh-go-aliyun-quota#readme",
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dshGo": {
+    "v": 1,
+    "title": {
+      "zh": "阿里云额度",
+      "en": "Aliyun quota"
+    },
+    "icon": "wallet",
+    "contributes": {
+      "composer.strip": [
+        {
+          "id": "strip-quota",
+          "icon": "wallet",
+          "panel": "quota"
+        }
+      ],
+      "composer.tools": [
+        {
+          "id": "refresh-quota",
+          "label": {
+            "zh": "刷新额度",
+            "en": "Refresh"
+          },
+          "icon": "refresh"
+        }
+      ],
+      "panels": [
+        {
+          "id": "quota",
+          "title": {
+            "zh": "额度与券",
+            "en": "Balance"
+          },
+          "icon": "wallet",
+          "placement": [
+            "session.tab",
+            "features",
+            "plugin"
+          ]
+        },
+        {
+          "id": "usage",
+          "title": {
+            "zh": "花费与模型",
+            "en": "Spending"
+          },
+          "icon": "chart",
+          "placement": [
+            "session.tab",
+            "features",
+            "plugin"
+          ]
+        },
+        {
+          "id": "settings",
+          "title": {
+            "zh": "密钥设置",
+            "en": "Access key"
+          },
+          "icon": "settings",
+          "placement": [
+            "features",
+            "plugin"
+          ]
+        }
+      ]
+    }
+  }
+}
